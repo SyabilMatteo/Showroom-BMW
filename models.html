@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Models & Series</title>
+    <!-- Link ke Output -->
+    <link rel="stylesheet" href="./output.css" />
+      
+    <!-- Font BMW Type Next -->
+      <link
+        href="https://db.onlinewebfonts.com/c/ac95f91c55cc591ecf37a4d136ff8031?family=BMWTypeNext+Pro+Regular"
+        rel="stylesheet"/>
+
+      <link
+        href="https://db.onlinewebfonts.com/c/ebbd1b35c77f5d6dbf8a9b5f6a8d06b3?family=BMWTypeNext+Latin"
+        rel="stylesheet"/>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* opsional: menyembunyikan scrollbar horizontal di bar filter */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#121212] text-white font-sans">
+  
+<!-- ========================================================= -->
+<!-- NAVBAR START -->
+<!-- ========================================================= -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-transform duration-500">
+  
+  <!-- NAVBAR CONTAINER -->
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-5 ">
+    <!-- INDETITY SECTION | KIRI -->
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- LOGO BMW -->
+        <img src="img/logobmw.png" class="h-12" alt="Flowbite Logo" />
+        <!-- TEXT WRAPPER -->
+        <div class="hidden md:flex items-center">
+          <!-- PEMBATAS -->
+          <div class="w-[2px] h-12 bg-white"></div>
+          <!-- TEKS SLOGAN -->
+          <div
+            class="leading-tight text-white pl-3">
+              <p class="text-md font-medium">The Ultimate</p>
+              <p class="text-md font-medium">Driving Machine</p>
+          </div>
+        </div>
+    </a>
+
+    <!-- TOMBOL HAMBURGER -->
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <!-- IKON -->
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    
+    <!-- MENU SECTION | KANAN -->
+    <div class="hidden w-full xl:block xl:w-auto" id="navbar-dropdown">
+      <!-- DAFTAR MENU UTAMA -->
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#262626] xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-[0.5px]-0 xl:bg-transparent">
+        <!-- ITEM MENU 1 -->
+        <li>
+          <a href="index.html" class="block py-3 px-3 text-white hover:bg-[#1C69D4]" aria-current="page">Experience</a>
+        </li>
+        <!-- ITEM MENU 2 -->
+        <li>
+          <a href="models.html" class="block py-3 px-3 text-white hover:bg-[#1C69D4]">Models & Series</a>
+        </li>
+        <!-- ITEM MENU 3 -->
+        <li>
+          <a href="maintenance.html" class="block py-3 px-3 text-white hover:bg-[#1C69D4]">Maintenance</a>
+        </li>
+        <!-- ITEM MENU 4 -->
+        <li>
+          <a href="dealership.html" class="block py-3 px-3 text-white hover:bg-[#1C69D4]">Dealerships</a>
+        </li>
+        <!-- ITEM MENU 5 (BMW ID Dropdown) -->
+        <li>
+            <!-- TOMBOL DROPDOWN BMW ID -->
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="inline-flex items-center justify-between w-full py-3 px-3 text-white hover:bg-[#1C69D4] cursor-pointer">
+              BMW ID
+              <!-- IKON PANAH DROPDOWN -->
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+
+            <!-- DROPDOWN BMW ID -->
+            <div id="dropdownNavbar"
+              class="hidden font-normal bg-[#262626] w-screen divide-y divide-gray-700 xl:absolute xl:w-44 rounded-b-md xl:bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.9)]">
+              <!-- DAFTAR ISI DROPDOWN -->
+              <ul class="py-3 px-4 text-sm text-white space-y-1" aria-labelledby="dropdownLargeButton">
+                <!-- DROPDOWN ITEM 1 -->
+                <li><a href="register.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Register</a></li>
+                <!-- DROPDOWN ITEM 2 -->
+                <li><a href="login.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Log in</a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ========================================================= -->
+<!-- NAVBAR END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- JUMBOTRON START -->
+<!-- ========================================================= -->
+<section class="relative bg-center bg-no-repeat bg-cover flex items-center justify-center bg-[url('img/bannermodels.png')] bg-gray-500 bg-blend-multiply min-h-screen pt-[80px]">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-2 px-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extralight tracking-normal leading-none text-white md:text-5xl lg:text-6xl uppercase">THE BMW LINEUP.</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Explore Perfection in Every Series.</p>
+    </div>
+</section>
+<!-- ========================================================= -->
+<!-- JUMBOTRON END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- FILTER BAR START -->
+<!-- ========================================================= -->
+<section class="sticky top-0 z-50 bg-[#262626]">
+  <div class="max-w-[1300px] mx-auto flex items-center gap-8 px-12 md:px-6 py-5 overflow-x-auto scrollbar-hide whitespace-nowrap shadow-xl">
+    <!-- Tombol Filter -->
+    <button id="filterToggle" class="hidden md:flex bg-[#1C69D4] px-6 py-3 items-center gap-2 hover:bg-blue-600 transition text-white font-medium cursor-pointer">
+      Filter
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- POPUP FILTER MODAL -->
+    <div id="filterModal"
+      class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-[100]">
+
+  <!-- BOX -->
+  <div class="bg-white w-[90%] md:w-[700px] rounded-lg shadow-xl p-8 text-white relative">
+    <!-- Tombol Close -->
+    <button id="closeModal"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black transition text-4xl leading-none uppercase cursor-pointer">×</button>
+
+    <!-- Judul -->
+    <h2 class="text-4xl font-thin text-[#000000] mb-12 text-center uppercase">Filter</h2>
+
+    <div class="flex flex-col gap-8">
+
+      <!-- Category -->
+      <div>
+        <h3 class="text-[#000000] text-xl font-normal mb-4">Category</h3>
+        <div class="flex flex-wrap gap-3">
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div 
+              class="border-[0.5px] text-black font-bold border-black/20 py-2 px-4 cursor-pointer transition peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]"> High-Performance
+            </div>
+          </label>
+
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] text-black font-bold border-black/20 py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Performance
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] text-black font-bold border-black/20 py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Standard
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div>
+        <h3 class="text-[#000000] text-xl font-normal mb-4">Body</h3>
+        <div class="flex flex-wrap gap-3">
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Sedan
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Touring
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Coupe
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Gran Coupe
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              SAV
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Engine -->
+      <div>
+        <h3 class="text-[#000000] text-xl font-normal mb-4">Engine</h3>
+        <div class="flex flex-wrap gap-3">
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Petrol
+            </div>
+          </label>
+        
+          <label class="relative">
+            <input type="checkbox" class="peer hidden">
+            <div
+              class="border-[0.5px] border-black/20 text-black font-bold py-2 px-4 cursor-pointer transition
+              peer-checked:bg-[#262626] peer-checked:text-white peer-checked:border-[#262626]">
+              Electric
+            </div>
+          </label>
+        </div>
+      </div>
+
+
+      <!-- Tombol Apply & Reset -->
+      <div class="flex justify-start gap-4 pt-4">
+        <button id="applyFilter"
+          class="bg-[#1C69D4] hover:bg-blue-800 transition text-white font-semibold px-12 py-3 cursor-pointer">Apply</button>
+        <button id="resetFilter"
+          class=" font-semibold border-2 border-[#262626] text-[#262626] hover:text-white hover:bg-[#262626] transition px-12 py-3 cursor-pointer">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const filterToggle = document.getElementById('filterToggle');
+  const filterModal = document.getElementById('filterModal');
+  const closeModal = document.getElementById('closeModal');
+  const applyFilter = document.getElementById('applyFilter');
+  const resetFilter = document.getElementById('resetFilter');
+
+  // Buka modal
+  filterToggle.addEventListener('click', () => {
+    filterModal.classList.remove('hidden')
+    document.body.classList.add('overflow-hidden');
+  });
+
+  // Tutup modal (tombol X)
+  closeModal.addEventListener('click', () => {
+    filterModal.classList.add('hidden')
+    document.body.classList.remove('overflow-hidden');
+  });
+
+  // Klik di luar area popup
+  filterModal.addEventListener('click', (e) => {
+    if (e.target === filterModal) {
+      filterModal.classList.add('hidden')
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+
+  // Reset checkbox
+  resetFilter.addEventListener('click', () => {
+    const checkboxes = filterModal.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+  });
+
+  // Apply filter demo
+  applyFilter.addEventListener('click', () => {
+    const selected = [];
+    filterModal.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+      selected.push(cb.nextSibling.textContent.trim());
+    });
+    console.log("Filter dipilih:", selected);
+    filterModal.classList.add('hidden')
+    document.body.classList.remove('overflow-hidden'); // Tutup modal
+  });
+</script>
+
+    <!-- Tombol Series -->
+    <div class="flex items-center gap-8 text-white">
+      <a href="#series-x" class="group relative font-medium transition">X<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-8" class="group relative font-medium transition">8<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-7" class="group relative font-medium transition">7<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-6" class="group relative font-medium transition">6<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-5" class="group relative font-medium transition">5<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-4" class="group relative font-medium transition">4<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-3" class="group relative font-medium transition">3<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-2" class="group relative font-medium transition">2<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-1" class="group relative font-medium transition">1<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+      <a href="#series-z" class="group relative font-medium transition">Z<span class="absolute -left-[4px] -right-[4px] -bottom-[12px] h-[2px] bg-[#1C69D4] scale-x-0 origin-bottom transition-transform duration-300 group-hover:scale-x-100"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- FILTER BAR END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (X) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section X -->
+<section id="series-x" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (X) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (8) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 8 -->
+<section id="series-8" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (8) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (7) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 7 -->
+<section id="series-7" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (7) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (6) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 6 -->
+<section id="series-6" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (6) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (5) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 5 -->
+<section id="series-5" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (5) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (4) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 4 -->
+<section id="series-4" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (4) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (3) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 3 -->
+<section id="series-3" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (3) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (2) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 2 -->
+<section id="series-2" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (2) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (1) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section 1 -->
+<section id="series-1" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (1) END -->
+<!-- ========================================================= -->
+
+
+
+<!-- ========================================================= -->
+<!-- SECTION (Z) START -->
+<!-- ========================================================= -->
+<!-- 📍 Section Z -->
+<section id="series-z" class="scroll-mt-20 min-h-96 flex flex-col justify-center items-center bg-[#262626] py-8">
+
+  <!-- GRID WRAPPER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1300px]">
+    
+    <!-- 🃏 CARD 1 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 2 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+          
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🃏 CARD 3 -->
+    <div class="relative w-full max-w-[400px] mx-auto">
+      <!-- BAGIAN TEKS -->
+      <div class="relative z-20 text-left pl-5">
+        <h5 class="text-7xl font-thin tracking-tight text-white">LOREM</h5>
+        <h5 class="text-lg font-normal pt-3 tracking-tight text-white">
+          LOREM IPSUM
+        </h5>
+
+        
+      </div>
+
+      <!-- WRAPPER GRADIENT + IMAGE -->
+      <div class="relative mt-10 pl-5 flex justify-start">
+        <div class="relative flex justify-center w-[450px]">
+
+          <!-- GRADIENT RECTANGLE -->
+          <div class="absolute bottom-0 w-full h-[380px] bg-gradient-to-t from-[#e6e6e6] via-[#ffffff00] to-transparent shadow-sm z-0"></div>
+
+          <!-- IMAGE MOBIL -->
+          <div class="relative z-10 flex justify-center">
+            <a href="deskripsimodel.html" class="group block">
+            <img class="w-[350px] p-8 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-110" src="img/model.png" alt="product image" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- SECTION (Z) END -->
+<!-- ========================================================= -->
+
+
+    <!-- JS LINK -->
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <!-- NAVBAR HIDE -->
+    <script>
+      const navbar = document.getElementById('navbar');
+      let lastScrollY = window.scrollY;
+    
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+      
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          // Scroll ke bawah → sembunyikan navbar
+          navbar.classList.add('-translate-y-full');
+        } else {
+          // Scroll ke atas → tampilkan navbar
+          navbar.classList.remove('-translate-y-full');
+        }
+      
+        lastScrollY = currentScrollY;
+      });
+    </script>
+</body>
+</html>
