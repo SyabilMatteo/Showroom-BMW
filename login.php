@@ -1,31 +1,39 @@
-<?php<?php
+<?php
 session_start();
 include 'koneksi.php';
 
-// Jika form dikirim
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
 
-    // 🔹 Cek user berdasarkan email ATAU username
+    // Query dengan semua kemungkinan kolom
     $query = "SELECT * FROM pengguna WHERE email = '$email' OR username = '$email' LIMIT 1";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
         
-        // 🔹 Verifikasi password (tanpa hash ulang)
+        // Debugging - tampilkan data user (hapus setelah testing)
+        echo "<script>console.log('User found:', " . json_encode($user) . ");</script>";
+        
+        // Verifikasi password
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id_pengguna'];
             $_SESSION['nama'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             
-            echo "<script>window.location='index.html';</script>";
+            echo "<script> window.location='home.html';</script>";
+            exit;
         } else {
-            echo "<script>alert('Password yang anda masukkan salah, silahkan periksa kembali.');</script>";
+            echo "<script>alert('Maaf password yang anda masukkan salah, silahkan cek kembali password anda');</script>";
         }
     } else {
-        echo "<script>alert('Username atau Email tidak ditemukan!');</script>";
+        echo "<script>alert('Maaf username atau gmail anda tidak bisa ditemukan');</script>";
+    }
+    
+    // Debugging query error
+    if (!$result) {
+        echo "<script>alert('Query error: " . mysqli_error($conn) . "');</script>";
     }
 }
 ?>
