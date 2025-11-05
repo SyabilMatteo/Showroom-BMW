@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW</title>
+    <!-- OUTPUT LINK -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- FONT BMWTypeNext -->
+    <link
+      href="https://db.onlinewebfonts.com/c/ac95f91c55cc591ecf37a4d136ff8031?family=BMWTypeNext+Pro+Regular"
+      rel="stylesheet"/>
+    <link
+      href="https://db.onlinewebfonts.com/c/ebbd1b35c77f5d6dbf8a9b5f6a8d06b3?family=BMWTypeNext+Latin"
+      rel="stylesheet"/>
+
+      <style>
+        body {
+            font-family: 'BMWTypeNext Pro Regular', sans-serif;
+        }
+        
+        /* Custom gradient untuk nama mobil */
+        .car-name-gradient {
+            background: linear-gradient(135deg, #ff6b35 0%, #d94a2a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Shadow untuk gambar mobil */
+        .car-image-shadow {
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+        }
+    </style>
+  </head>
+  <body class="bg-[#262626]">
+<!-- ========================================================= -->
+<!-- NAVBAR START -->
+<!-- ========================================================= -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-transform duration-500">
+  
+  <!-- NAVBAR CONTAINER -->
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-5 ">
+    <!-- INDETITY SECTION | KIRI -->
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- LOGO BMW -->
+        <img src="img/logobmw.png" class="h-12" alt="Flowbite Logo" />
+        <!-- TEXT WRAPPER -->
+        <div class="hidden md:flex items-center">
+          <!-- PEMBATAS -->
+          <div class="w-[2px] h-12 bg-white"></div>
+          <!-- TEKS SLOGAN -->
+          <div
+            class="leading-tight text-white pl-3">
+              <p class="text-md font-medium">The Ultimate</p>
+              <p class="text-md font-medium">Driving Machine</p>
+          </div>
+        </div>
+    </a>
+
+    <!-- TOMBOL HAMBURGER -->
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <!-- IKON -->
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    
+    <!-- MENU SECTION | KANAN -->
+    <div class="hidden w-full xl:block xl:w-auto" id="navbar-dropdown">
+      <!-- DAFTAR MENU UTAMA -->
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#262626] xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-[0.5px]-0 xl:bg-transparent">
+        <!-- ITEM MENU 1 -->
+        <li>
+          <a href="index.html" class="block py-3 px-3 text-white hover:bg-[#414141]" aria-current="page">Experience</a>
+        </li>
+        <!-- ITEM MENU 2 -->
+        <li>
+          <a href="models.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Models & Series</a>
+        </li>
+        <!-- ITEM MENU 3 -->
+        <li>
+          <a href="maintenance.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Maintenance</a>
+        </li>
+        <!-- ITEM MENU 4 -->
+        <li>
+          <a href="dealership.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Dealerships</a>
+        </li>
+        <!-- ITEM MENU 5 (BMW ID Dropdown) -->
+        <li>
+            <!-- TOMBOL DROPDOWN BMW ID -->
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="inline-flex items-center justify-between w-full py-3 px-3 text-white hover:bg-[#414141] cursor-pointer">
+              BMW ID
+              <!-- IKON PANAH DROPDOWN -->
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+
+            <!-- DROPDOWN BMW ID -->
+            <div id="dropdownNavbar"
+              class="hidden font-normal bg-[#262626] w-screen divide-y divide-gray-700 xl:absolute xl:w-44 rounded-b-md xl:bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.9)]">
+              <!-- DAFTAR ISI DROPDOWN -->
+              <ul class="py-3 px-4 text-sm text-white space-y-1" aria-labelledby="dropdownLargeButton">
+                <!-- DROPDOWN ITEM 1 -->
+                <li><a href="register.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Register</a></li>
+                <!-- DROPDOWN ITEM 2 -->
+                <li><a href="login.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Log in</a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- ========================================================= -->
+<!-- BANNER START -->
+<!-- ========================================================= -->  
+<section class="relative h-screen overflow-hidden flex items-center px-16 pt-16">
+  <img src="img/ban.png" alt="Banner" class="absolute top-0 left-0 w-full h-full object-cover">
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- CAR DETAIL SECTION (HERO) START -->
+<!-- ========================================================= -->
+<section class="max-h-screen flex items-center justify-center px-4 py-32 bg-[#1a1a1a]">
+    <div class="max-w-6xl w-full relative">
+        <div class="absolute top-0 bottom-0 left-0 w-[2px] bg-gradient-to-b from-transparent via-white/20 to-transparent hidden lg:block"></div>
+        <div class="absolute top-0 bottom-0 right-0 w-[2px] bg-gradient-to-b from-transparent via-white/20 to-transparent hidden lg:block"></div>
+        
+        <div class="px-8 lg:px-16">
+            <!-- MODEL NAME -->
+            <div class="text-center mb-8">
+                <img src="img/logom.png" alt="BMW M135" class="max-w-[180px] w-full h-auto mx-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" />
+            </div>
+            
+            <!-- CAR IMAGE -->
+            <div class="text-center mb-12">
+                <img src="img/models2.png" alt="BMW M135" class="max-w-[550px] w-full h-auto mx-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" />
+            </div>
+            
+            <!-- SPECIFICATIONS GRID -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
+                <div>
+                    <p class="text-sm text-gray-400 mb-2 font-light">Power</p>
+                    <p class="text-3xl lg:text-4xl text-white font-light tracking-wide">000 hp</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400 mb-2 font-light">Torque</p>
+                    <p class="text-3xl lg:text-4xl text-white font-light tracking-wide">000 Nm</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400 mb-2 font-light">0-100 km/h</p>
+                    <p class="text-3xl lg:text-4xl text-white font-light tracking-wide">0.0 s</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400 mb-2 font-light">Vmax</p>
+                    <p class="text-3xl lg:text-4xl text-white font-light tracking-wide">000 km/h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- TECHNICAL SPECIFICATIONS SECTION START (IMPROVED) -->
+<!-- ========================================================= -->
+<section class="relative bg-[#262626] pt-32 md:pt-32 pb-20 px-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- Minimalist Title Overlay -->
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+            <p class="text-white text-lg mt-8 uppercase tracking-[0.4em] font-light">SPECIFICATIONS</p>
+            <div class="w-24 h-[0.2px] bg-[#ffffff] mx-auto mt-2"></div>
+        </div>
+
+        <!-- Specs Grid - More Premium Look -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-14">
+            
+            <!-- Engine -->
+            <div class="bg-[#1a1a1a] p-8 hover:bg-[#000000] transition-all duration-300">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-light text-white uppercase tracking-wider">Engine</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Type</span>
+                        <span class="text-white text-sm">4-cyl Turbo</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Displacement</span>
+                        <span class="text-white text-sm">1,998 cc</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transmission -->
+            <div class="bg-[#1a1a1a] p-8 hover:bg-[#000000] transition-all duration-300">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-light text-white uppercase tracking-wider">Transmission</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Type</span>
+                        <span class="text-white text-sm">8-speed Auto</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Drive</span>
+                        <span class="text-white text-sm">FWD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Release Info -->
+            <div class="bg-[#1a1a1a] p-8 hover:bg-[#000000] transition-all duration-300">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-light text-white uppercase tracking-wider">Release</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Year</span>
+                        <span class="text-white text-sm">2019</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400 text-sm">Generation</span>
+                        <span class="text-white text-sm">F40</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>  
+
+
+
+<!-- ========================================================= -->
+<!-- DETAILED DESCRIPTION SECTION START -->
+<!-- ========================================================= -->
+<section class="py-20 px-4 bg-[#1a1a1a]">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <img src="img/models2.png" alt="BMW M135i Interior" class="w-full h-auto" />
+            </div>
+            <div class="order-1 lg:order-2 p-4">
+                <h3 class="text-3xl md:text-4xl font-light text-white mb-6 uppercase tracking-wide">Pure Driving Dynamics</h3>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                    The BMW M135i xDrive delivers an exhilarating driving experience with its powerful 2.0-liter TwinPower Turbo engine. Experience unprecedented agility and precision with BMW's intelligent all-wheel-drive system.
+                </p>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Every curve becomes an invitation to explore the limits of performance, while the M Sport suspension ensures optimal road contact and driving pleasure.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 360° SHOWCASE SECTION START -->
+<!-- ========================================================= -->
+<section class="relative py-20 px-4 bg-[#262626]">
+    <div class="max-w-3xl mx-auto">
+        <!-- Minimalist Title Overlay -->
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+            <p class="text-white text-lg mt-8 uppercase tracking-[0.4em] font-light">All Around</p>
+            <div class="w-24 h-[0.2px] bg-[#ffffff] mx-auto mt-2"></div>
+        </div>
+
+        <!-- 360 Viewer Container -->
+        <div class="relative rounded-lg overflow-hidden pt-14">
+            <!-- Image Display -->
+            <div class="relative aspect-video flex items-center justify-center p-8 pb-14">
+                <!-- Front View -->
+                <img id="view-front" src="img/m135-front.png" alt="Front View" class="max-w-full max-h-[900px] w-auto h-auto mx-auto drop-shadow-2xl view-image" />
+                
+                <!-- Left View -->
+                <img id="view-left" src="img/m135-left.png" alt="Left View" class="max-w-full max-h-[900px] w-auto h-auto mx-auto drop-shadow-2xl view-image hidden" />
+                
+                <!-- Back View -->
+                <img id="view-back" src="img/m135-back.png" alt="Back View" class="max-w-full max-h-[900px] w-auto h-auto mx-auto drop-shadow-2xl view-image hidden" />
+                
+                <!-- Right View -->
+                <img id="view-right" src="img/m135-right.png" alt="Right View" class="max-w-full max-h-[900px] w-auto h-auto mx-auto drop-shadow-2xl view-image hidden" />
+            </div>
+
+            <!-- View Label -->
+            <!-- <div class="absolute top-6 left-6 bg-[#1C69D4] px-4 py-2 rounded-md">
+                <p id="view-label" class="text-white font-semibold">Front View</p>
+            </div> -->
+
+            <!-- Navigation Buttons -->
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-4">
+                <!-- Previous Button -->
+                <button onclick="previousView()" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 rounded-full transition-all duration-300 group">
+                    <svg class="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+
+                <!-- Next Button -->
+                <button onclick="nextView()" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 rounded-full transition-all duration-300 group">
+                    <svg class="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- View Indicators -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-20 flex gap-3">
+                <button onclick="goToView(0)" class="view-indicator w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
+                <button onclick="goToView(1)" class="view-indicator w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+                <button onclick="goToView(2)" class="view-indicator w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+                <button onclick="goToView(3)" class="view-indicator w-3 h-3 rounded-full bg-white/30 transition-all duration-300"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- COLOR SELECTOR SECTION START -->
+<!-- ========================================================= -->
+<section class="py-20 px-4 bg-[#1a1a1a] relative">
+    <!-- Minimalist Title Overlay -->
+    <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+      <p class="text-white text-lg mt-8 uppercase tracking-[0.4em] font-light">COLOR OPTIONS</p>
+      <div class="w-24 h-[0.2px] bg-[#ffffff] mx-auto mt-2"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pt-14 ">
+        <!-- Car Image Display -->
+        <div class="relative rounded-lg overflow-hidden p-4 mb-2">
+            <div class="flex items-center justify-center min-h-[400px]">
+                <!-- Alpine White -->
+                <img id="color-white" src="img/m135-white.png" alt="Alpine White" class="max-w-full max-h-[500px] w-auto h-auto mx-auto drop-shadow-2xl color-image" />
+                
+                <!-- Melbourne Red -->
+                <img id="color-red" src="img/m135-red.png" alt="Melbourne Red" class="max-w-full max-h-[500px] w-auto h-auto mx-auto drop-shadow-2xl color-image hidden" />
+                
+                <!-- Misano Blue -->
+                <img id="color-blue" src="img/m135-blue.png" alt="Misano Blue" class="max-w-full max-h-[500px] w-auto h-auto mx-auto drop-shadow-2xl color-image hidden" />
+                
+                <!-- Black Sapphire -->
+                <img id="color-black" src="img/m135-black.png" alt="Black Sapphire" class="max-w-full max-h-[500px] w-auto h-auto mx-auto drop-shadow-2xl color-image hidden" />
+                
+                <!-- Sao Paulo Yellow -->
+                <img id="color-yellow" src="img/m135-yellow.png" alt="Sao Paulo Yellow" class="max-w-full max-h-[500px] w-auto h-auto mx-auto drop-shadow-2xl color-image hidden" />
+            </div>
+
+            <!-- Minimalist Color Name Label -->
+            <div class="absolute top-8 left-8">
+                <p id="color-name" class="text-white text-sm uppercase tracking-[0.3em] font-light">Alpine White</p>
+            </div>
+        </div>
+
+        <!-- Color Selector Buttons -->
+        <div class="flex flex-wrap justify-center gap-6">
+            
+            <!-- Alpine White -->
+            <button onclick="changeColor('white', 'Alpine White')" class="color-btn group relative">
+                <div class="w-10 h-10 bg-white border-4 border-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl active-color"></div>
+                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white text-xs whitespace-nowrap font-semibold">Alpine White</p>
+                </div>
+            </button>
+
+            <!-- Melbourne Red -->
+            <button onclick="changeColor('red', 'Melbourne Red')" class="color-btn group relative">
+                <div class="w-10 h-10 bg-red-600 border-4 border-transparent shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl"></div>
+                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white text-xs whitespace-nowrap font-semibold">Melbourne Red</p>
+                </div>
+            </button>
+
+            <!-- Sao Paulo Yellow -->
+            <button onclick="changeColor('yellow', 'Sao Paulo Yellow')" class="color-btn group relative">
+                <div class="w-10 h-10 bg-yellow-400 border-4 border-transparent shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl"></div>
+                <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p class="text-white text-xs whitespace-nowrap font-semibold">Sao Paulo Yellow</p>
+                </div>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- VIDEO SECTION START (FULLSCREEN & MINIMALIST) -->
+<!-- ========================================================= -->
+<section class="relative h-screen bg-black">
+  <!-- Player Container -->
+  <div id="player" class="w-full h-full"></div>
+</section>
+
+<script>
+  // 1️⃣ Tambahkan script API YouTube
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 2️⃣ Siapkan variabel global player
+  var player;
+
+  // 3️⃣ Fungsi otomatis saat API siap
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'vgptnBwdyx4', // ID video kamu
+      playerVars: {
+        autoplay: 0, // ❌ jangan autoplay
+        mute: 0,
+        controls: 1,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+      },
+      events: {
+        onReady: onPlayerReady
+      }
+    });
+  }
+
+  // 4️⃣ Saat player siap
+  function onPlayerReady() {
+    // Tunggu klik tombol
+    document.getElementById('play-btn').addEventListener('click', function() {
+      document.getElementById('video-overlay').classList.add('hidden');
+      player.playVideo();
+    });
+  }
+</script>
+
+
+
+<!-- ========================================================= -->
+<!-- PRICING SECTION START (MINIMALIST & ELEGANT) -->
+<!-- ========================================================= -->
+<section class="py-32 px-4 bg-[#1a1a1a] relative">
+    <div class="max-w-5xl mx-auto pt-14">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Car Image -->
+            <div class="order-2 lg:order-1">
+                <img src="img/models2.png" alt="BMW M135i" class="mx-auto h-auto drop-shadow-2xl w-2/3 sm:w-1/2 md:w-3/4 lg:w-full transition-all duration-500" />
+            </div>
+
+            <!-- Pricing Info -->
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+                <p class="text-gray-400 text-sm uppercase tracking-[0.3em] mb-4">Starting From</p>
+                <h2 class="text-6xl md:text-7xl font-light text-white mb-2">Rp 1.2B</h2>
+                <p class="text-gray-400 text-sm mb-12">On The Road Jakarta</p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="dealership.html" class="border border-white px-12 py-4 text-sm bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] transition-all duration-300 uppercase cursor-pointer">
+                        Find Dealer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (NAVBAR HIDE) -->
+<!-- ========================================================= -->
+    <script>
+      const navbar = document.getElementById('navbar');
+      let lastScrollY = window.scrollY;
+    
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+      
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          // Scroll ke bawah → sembunyikan navbar
+          navbar.classList.add('-translate-y-full');
+        } else {
+          // Scroll ke atas → tampilkan navbar
+          navbar.classList.remove('-translate-y-full');
+        }
+      
+        lastScrollY = currentScrollY;
+      });
+    </script>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (360° VIEW & COLOR SELECTOR FUNCTIONALITY) -->
+<!-- ========================================================= -->
+<script>
+let currentView = 0;
+const views = ['front', 'left', 'back', 'right'];
+const viewLabels = ['Front View', 'Left View', 'Back View', 'Right View'];
+
+function updateView() {
+    // Hide all images
+    document.querySelectorAll('.view-image').forEach(img => {
+        img.classList.add('hidden');
+    });
+    
+    // Show current view
+    document.getElementById(`view-${views[currentView]}`).classList.remove('hidden');
+    
+    // Update label
+    document.getElementById('view-label').textContent = viewLabels[currentView];
+    
+    // Update indicators
+    document.querySelectorAll('.view-indicator').forEach((indicator, index) => {
+        if (index === currentView) {
+            indicator.classList.remove('bg-white/30');
+            indicator.classList.add('bg-white');
+        } else {
+            indicator.classList.remove('bg-white');
+            indicator.classList.add('bg-white/30');
+        }
+    });
+}
+
+function nextView() {
+    currentView = (currentView + 1) % 4;
+    updateView();
+}
+
+function previousView() {
+    currentView = (currentView - 1 + 4) % 4;
+    updateView();
+}
+
+function goToView(index) {
+    currentView = index;
+    updateView();
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') nextView();
+    if (e.key === 'ArrowLeft') previousView();
+});
+
+
+// ========================================================
+// COLOR SELECTOR FUNCTIONALITY
+// ========================================================
+function changeColor(colorId, colorName) {
+    // Hide all color images
+    document.querySelectorAll('.color-image').forEach(img => {
+        img.classList.add('hidden');
+    });
+    
+    // Show selected color
+    document.getElementById(`color-${colorId}`).classList.remove('hidden');
+    
+    // Update color name
+    document.getElementById('color-name').textContent = colorName;
+    
+    // Update active button border
+    document.querySelectorAll('.color-btn > div').forEach(btn => {
+        btn.classList.remove('border-white', 'active-color');
+        btn.classList.add('border-transparent');
+    });
+    
+    // Add active state to clicked button
+    event.currentTarget.querySelector('div').classList.remove('border-transparent');
+    event.currentTarget.querySelector('div').classList.add('border-white', 'active-color');
+}
+</script>
+
+
+
+<!-- ========================================================= -->
+<!-- JS LINKS -->
+<!-- ========================================================= -->
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
