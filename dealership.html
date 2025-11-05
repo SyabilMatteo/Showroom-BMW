@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW</title>
+    <!-- OUTPUT LINK -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- FONT BMWTypeNext -->
+    <link
+      href="https://db.onlinewebfonts.com/c/ac95f91c55cc591ecf37a4d136ff8031?family=BMWTypeNext+Pro+Regular"
+      rel="stylesheet"/>
+    <link
+      href="https://db.onlinewebfonts.com/c/ebbd1b35c77f5d6dbf8a9b5f6a8d06b3?family=BMWTypeNext+Latin"
+      rel="stylesheet"/>
+  </head>
+  <body class="bg-[#262626]">
+<!-- ========================================================= -->
+<!-- NAVBAR START -->
+<!-- ========================================================= -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.3)] transition-transform duration-500">
+  
+  <!-- NAVBAR CONTAINER -->
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-6 py-5 ">
+    <!-- INDETITY SECTION | KIRI -->
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- LOGO BMW -->
+        <img src="img/logobmw.png" class="h-12" alt="Flowbite Logo" />
+        <!-- TEXT WRAPPER -->
+        <div class="hidden md:flex items-center">
+          <!-- PEMBATAS -->
+          <div class="w-[2px] h-12 bg-white"></div>
+          <!-- TEKS SLOGAN -->
+          <div
+            class="leading-tight text-white pl-3">
+              <p class="text-md font-medium">The Ultimate</p>
+              <p class="text-md font-medium">Driving Machine</p>
+          </div>
+        </div>
+    </a>
+
+    <!-- TOMBOL HAMBURGER -->
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <!-- IKON -->
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    
+    <!-- MENU SECTION | KANAN -->
+    <div class="hidden w-full xl:block xl:w-auto" id="navbar-dropdown">
+      <!-- DAFTAR MENU UTAMA -->
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#262626] xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-[0.5px]-0 xl:bg-transparent">
+        <!-- ITEM MENU 1 -->
+        <li>
+          <a href="index.html" class="block py-3 px-3 text-white hover:bg-[#414141]" aria-current="page">Experience</a>
+        </li>
+        <!-- ITEM MENU 2 -->
+        <li>
+          <a href="models.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Models & Series</a>
+        </li>
+        <!-- ITEM MENU 3 -->
+        <li>
+          <a href="maintenance.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Maintenance</a>
+        </li>
+        <!-- ITEM MENU 4 -->
+        <li>
+          <a href="dealership.html" class="block py-3 px-3 text-white hover:bg-[#414141]">Dealerships</a>
+        </li>
+        <!-- ITEM MENU 5 (BMW ID Dropdown) -->
+        <li>
+            <!-- TOMBOL DROPDOWN BMW ID -->
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="inline-flex items-center justify-between w-full py-3 px-3 text-white hover:bg-[#414141] cursor-pointer">
+              BMW ID
+              <!-- IKON PANAH DROPDOWN -->
+              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+
+            <!-- DROPDOWN BMW ID -->
+            <div id="dropdownNavbar"
+              class="hidden font-normal bg-[#262626] w-screen divide-y divide-gray-700 xl:absolute xl:w-44 rounded-b-md xl:bg-[#262626] shadow-[0_8px_30px_rgba(0,0,0,0.9)]">
+              <!-- DAFTAR ISI DROPDOWN -->
+              <ul class="py-3 px-4 text-sm text-white space-y-1" aria-labelledby="dropdownLargeButton">
+                <!-- DROPDOWN ITEM 1 -->
+                <li><a href="register.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Register</a></li>
+                <!-- DROPDOWN ITEM 2 -->
+                <li><a href="login.html" class="block px-8 py-4 text-[16px] hover:bg-[#3c3c3c] hover:text-white">Log in</a></li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- ========================================================= -->
+<!-- JUMBOTRON START -->
+<!-- ========================================================= -->
+<section class="relative bg-center bg-no-repeat bg-cover flex items-center justify-center bg-[url('img/bannerdealership.png')] bg-gray-500 bg-blend-multiply min-h-screen pt-[80px]">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extralight tracking-normal leading-none text-white md:text-5xl lg:text-6xl uppercase">FIND YOUR BMW.</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Explore Our Authorized Dealerships Near You.</p>
+    </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- MAPS START -->
+<!-- ========================================================= -->
+<section id="map-section" class="relative w-screen h-[500px] mb-10 overflow-hidden">
+  <!-- Google Maps -->
+  <iframe id="mapFrame" class="absolute top-0 left-0 w-full h-full" src="https://www.google.com/maps?q=Bintaro+Indonesia&output=embed" allowfullscreen loading="lazy">
+  </iframe>
+
+  <!-- Efek gelap -->
+  <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- DEALERSHIP CARDS START -->
+<!-- ========================================================= -->
+<section class="">
+  <!-- ========================================================= -->
+  <!-- FILTER & SEARCH BAR -->
+  <!-- ========================================================= -->
+<div class="sticky top-0 z-50 bg-[#262626] shadow-xl px-16 py-8 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- SEARCH BAR -->
+    <div class="md:col-span-2">
+      <label class="text-white text-sm mb-2 block">Search Dealership</label>
+      <div class="relative">
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="Search by name or city..." 
+          class="w-full px-2 py-2.5 pl-9 bg-[#1E1E1E] border border-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-sm">
+        <svg class="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- FILTER PROVINSI -->
+    <div>
+      <label class="text-white text-sm mb-2 block">Filter by Province</label>
+        <select 
+          id="provinceFilter"
+          class="w-full px-3 py-2.5 bg-[#1E1E1E] border border-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+          <option value="all">All Provinces</option>
+          <option value="Banten">Banten</option>
+          <option value="DKI Jakarta">DKI Jakarta</option>
+          <option value="Jawa Barat">Jawa Barat</option>
+          <option value="DI Yogyakarta">DI Yogyakarta</option>
+          <option value="Bali">Bali</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- RESULT COUNT -->
+    <div class="mt-2 text-gray-400 text-sm">
+      Showing <span id="resultCount">9</span> dealerships
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DEALERSHIP CARD GRID START -->
+  <!-- ========================================================= -->
+  <div class="max-w-7xl mx-auto">
+    <div id="dealershipGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
+      
+      <!-- PROV BANTEN 1 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="Banten" data-name="BMW Astra Serpong" data-city="Tangerang">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Astra Serpong" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">Banten</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Astra Serpong</h3>
+          <p class="text-gray-400 text-sm mb-4">Tangerang</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>BSD City, Jl. BSD Boulevard Barat</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 538-7000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Astra Serpong, BSD City')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Astra Serpong', '62215387000')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- PROV BANTEN 2 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="Banten" data-name="BMW Bintaro" data-city="Tangerang">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Bintaro" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">Banten</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Bintaro</h3>
+          <p class="text-gray-400 text-sm mb-4">Tangerang</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Bintaro, Jl. Boulevard Bintaro Jaya</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 537-8200</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Bintaro, Tangerang Selatan')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Bintaro', '62215378200')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PROV DKI JAKARTA 1 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="DKI Jakarta" data-name="BMW Astra Cilandak" data-city="Jakarta Selatan">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Astra Cilandak" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">DKI Jakarta</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Astra Cilandak</h3>
+          <p class="text-gray-400 text-sm mb-4">Jakarta Selatan</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. TB Simatupang No.1, Cilandak</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 759-1000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Astra Cilandak, Jakarta Selatan')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Astra Cilandak', '62217591000')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- PROV DKI JAKARTA 2 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="DKI Jakarta" data-name="BMW Eurokars Menteng" data-city="Jakarta Pusat">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Eurokars Menteng" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">DKI Jakarta</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Eurokars Menteng</h3>
+          <p class="text-gray-400 text-sm mb-4">Jakarta Pusat</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Teuku Cik Ditiro No.41, Menteng</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 314-2200</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Eurokars Menteng, Jakarta Pusat')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Eurokars Menteng', '62213142200')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROV JAWA BARAT 1 --> 
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="Jawa Barat" data-name="BMW Tunas Bandung" data-city="Bandung">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Tunas Bandung" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">Jawa Barat</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Tunas Bandung</h3>
+          <p class="text-gray-400 text-sm mb-4">Bandung</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Dr. Djunjunan No.160, Pasteur</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 723-2400</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Tunas Bandung, Bandung')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Tunas Bandung', '62217232400')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- PROV JAWA BARAT 2 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="Jawa Barat" data-name="BMW Eurokars Bandung" data-city="Bandung">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Eurokars Bandung" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">Jawa Barat</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Eurokars Bandung</h3>
+          <p class="text-gray-400 text-sm mb-4">Bandung</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Soekarno Hatta No.438</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 731-1100</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Eurokars Bandung, Bandung')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Eurokars Bandung', '62217311100')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROV DI YOGYAKARTA 1 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="DI Yogyakarta" data-name="BMW Astra Yogyakarta" data-city="Sleman">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Astra Yogyakarta" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">DI Yogyakarta</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Astra Yogyakarta</h3>
+          <p class="text-gray-400 text-sm mb-4">Sleman</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Laksda Adisucipto No.128</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 588-2000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Astra Yogyakarta, Sleman')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Astra Yogyakarta', '62215882000')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- PROV DI YOGYAKARTA 2 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="DI Yogyakarta" data-name="BMW Jogja Auto Gallery" data-city="Bantul">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Jogja Auto Gallery" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">DI Yogyakarta</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Jogja Auto Gallery</h3>
+          <p class="text-gray-400 text-sm mb-4">Bantul</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Solo Km 8</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 300-9000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Jogja Auto Gallery, Bantul')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Jogja Auto Gallery', '62213009000')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROV BALI 1 -->
+      <div class="dealership-card bg-[#000000]/20 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+           data-province="Bali" data-name="BMW Astra Denpasar" data-city="Denpasar">
+        <div class="relative h-48 overflow-hidden">
+          <img src="img/bmwbintaro.png" alt="BMW Astra Denpasar" class="w-full h-full object-cover">
+          <div class="absolute top-0 right-0 bg-black/50 px-6 py-3">
+            <p class="text-white text-sm">Bali</p>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-white text-xl font-semibold mb-2">BMW Astra Denpasar</h3>
+          <p class="text-gray-400 text-sm mb-4">Denpasar</p>
+          <div class="space-y-2 mb-14">
+            <div class="flex items-start text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>Jl. Gatot Subroto Barat No.371</span>
+            </div>
+            <div class="flex items-center text-gray-300 text-sm">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>(021) 860-9000</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <button onclick="updateMap('BMW Astra Denpasar, Denpasar')" class="w-full bg-[#646464]/20 text-white hover:bg-[#d0d0d0] hover:text-black text-[12px] font-thin tracking-[0.1em] border py-4 transition-all duration-300 uppercase cursor-pointer">
+            View in maps
+            </button>
+            <button onclick="contactDealer('BMW Astra Denpasar', '62218609000')" class="w-full bg-[#646464]/20 text-white hover:bg-[#3BB143] text-[12px] font-thin tracking-[0.1em] py-4 transition-all duration-300 uppercase cursor-pointer">
+            Contact Dealer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NO RESULTS MESSAGE -->
+    <div id="noResults" class="hidden text-center py-16">
+      <svg class="w-20 h-20 mx-auto text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <p class="text-gray-400 text-xl">No dealerships found</p>
+      <p class="text-gray-500 mt-2">Try adjusting your search or filters</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (FILTER CARDS) -->
+<!-- ========================================================= -->
+<script>
+// FILTER FUNCTION
+function filterDealerships() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const provinceFilter = document.getElementById('provinceFilter').value;
+  const cards = document.querySelectorAll('.dealership-card');
+  const noResults = document.getElementById('noResults');
+  const resultCount = document.getElementById('resultCount');
+  
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const name = card.getAttribute('data-name');
+    const city = card.getAttribute('data-city');
+    const province = card.getAttribute('data-province');
+    
+    const matchesSearch = name.includes(searchTerm) || city.includes(searchTerm);
+    const matchesProvince = provinceFilter === 'all' || province === provinceFilter;
+    
+    if (matchesSearch && matchesProvince) {
+      card.style.display = 'block';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Update result count
+  resultCount.textContent = visibleCount;
+
+  // Show/hide no results message
+  if (visibleCount === 0) {
+    noResults.classList.remove('hidden');
+  } else {
+    noResults.classList.add('hidden');
+  }
+}
+
+// EVENT LISTENERS
+document.getElementById('searchInput').addEventListener('input', filterDealerships);
+document.getElementById('provinceFilter').addEventListener('change', filterDealerships);
+
+// NAVBAR HIDE ON SCROLL
+const navbar = document.getElementById('navbar');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  
+  if (currentScrollY > lastScrollY && currentScrollY > 80) {
+    navbar.classList.add('-translate-y-full');
+  } else {
+    navbar.classList.remove('-translate-y-full');
+  }
+  
+  lastScrollY = currentScrollY;
+});
+</script>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (NAVBAR HIDE) -->
+<!-- ========================================================= -->
+    <script>
+      const navbar = document.getElementById('navbar');
+      let lastScrollY = window.scrollY;
+    
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+      
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+          // Scroll ke bawah → sembunyikan navbar
+          navbar.classList.add('-translate-y-full');
+        } else {
+          // Scroll ke atas → tampilkan navbar
+          navbar.classList.remove('-translate-y-full');
+        }
+      
+        lastScrollY = currentScrollY;
+      });
+    </script>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (MAPS) -->
+<!-- ========================================================= -->
+<script>
+  function updateMap(location) {
+    const mapFrame = document.getElementById('mapFrame');
+    mapFrame.src = `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed`;
+    window.scrollTo({ top: document.getElementById('map-section').offsetTop, behavior: 'smooth' });
+  }
+</script>
+
+
+
+<!-- ========================================================= -->
+<!-- JS (CONTACT DEALER) -->
+<!-- ========================================================= -->
+<script>
+  function contactDealer(name, number) {
+    const message = `Halo ${name}, saya ingin informasi lebih lanjut.`;
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+
+<!-- ========================================================= -->
+<!-- JS LINKS -->
+<!-- ========================================================= -->
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>
